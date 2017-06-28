@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Start of HTML -->
+<html>
+
+<!-- Start of Head -->
+<head>
+
+<!-- Start of Title -->
+<title>Left Nav Sidebar using bootstrap properties</title>
+
+<!-- Start of Meta-tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Bootstrap Import -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+<!-- Start of CSS Styling -->
+<style>
+.sidenav1 {   
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+}
+
+.sidenav1 a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav1 a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav1 .closebtn {
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {height: 450px}
+    
+    /* Set gray background color and 100% height */
+.sidenav1 {
+	height: 100%;
+    }
+   
+/* Set black background color, white text and some padding */
+footer {
+     background-color: #555;
+     color: white;
+     padding: 15px;
+}
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+.sidenav1 {
+     height: auto;
+     padding: 15px;
+      }
+.row.content {height:auto;} 
+    }
+	
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+@media screen and (max-width: 500px) {
+  #mySidenav1 { display:none;}
+  #main {display:block !important;}
+}
+</style>
+<!-- End of CSS Styling -->
+
+</head>
+<!-- End Head -->
+
+<!-- Start Body -->
+<body>
+<!-- Start top Navbar -->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Testimonials</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- End top Navbar -->
+
+
+		<!-- Start Side Navbar -->   
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="#">About</a>
+          <a href="#">Projects</a>
+          <a href="#">Services</a>
+          <a href="#">Team</a>
+          <a href="#">Contact us</a>
+        </div>
+		<!-- End Side navbar-->  
+
+  		<!-- Start container-fluid -->
+        <div class="container-fluid text-center">    
+          <div class="row content">          
+            <div class="col-sm-2 sidenav1" id="mySidenav1">   
+                
+              <p><a href="#">About</a></p>
+              <p><a href="#">Projects</a></p>
+              <p><a href="#">Services</a></p>
+              <p><a href="#">Team</a></p>
+              <p><a href="#">Contact us</a></p>
+        
+            </div>
+          <div class="col-sm-8 text-left"> 
+            
+          	<div id="main" style="display:none;">
+          	<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+        	</div>
+        
+              <h1>Left Nav Sidebar using bootstrap properties</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <hr>
+           </div>            
+          </div>
+        </div>
+
+<!-- End container-fluid -->
+
+<!-- Start of Footer -->
+<footer class="container-fluid text-center">
+  <p style="text-align:center;">&copy; Copyright 2017. Developed by Arvind Ahuja: <a href="mailto:geetika.arvind@gmail.com">
+  Email Me</a>.</p> 
+</footer>
+<!-- End of Footer -->
+
+<!-- Start of Script -->
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+function openNav1() {
+    document.getElementById("mySidenav1").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+<!-- End of Script -->
+
+</body>
+<!-- End Body -->
+</html>
+<!-- End HTML -->
